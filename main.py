@@ -16,13 +16,13 @@ def poser_questions():
         while True:
             try:
                 #Donner les conditions
-                print("Veuillez entrer un chiffre entre 1 et 20.")
+                print("Veuillez entrer un chiffre entre 1 et 200.")
                 reponse = int(input(question + " "))
                 if 1 <= reponse <= 200:
                     reponses.append(reponse)
                     break  # Sortir de la boucle si la réponse est valide
                 else:
-                    print("La réponse doit être entre 100 et 200.")
+                    print("La réponse doit être entre 1 et 200.")
             except ValueError:
                 print("Veuillez entrer un chiffre valide.")
 
