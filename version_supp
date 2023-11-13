@@ -1,0 +1,46 @@
+import turtle
+
+# Instantier les variables
+# Liste des questions
+questions = [
+    "Question 1 : Quel age ?",
+    "Question 2 : ",
+    "Question 3 : ",
+    "Question 4 : ",
+    "Question 5 : ",
+    "Question 6 : "
+]
+# Listes des réponses
+reponses = []
+
+def ask_question(question):
+    reponse = int(input(question))
+    return reponse
+
+# Add responses to the list
+liste_reponses = [ask_question(question) for question in questions]
+
+def draw(liste_reponses):
+    i = 0
+    print(liste_reponses)
+    while i < liste_reponses[0]:
+        my_turtle.left(liste_reponses[1])
+        my_turtle.forward(liste_reponses[2])
+        my_turtle.left(liste_reponses[1])
+        my_turtle.forward(liste_reponses[3])
+        my_turtle.left(liste_reponses[1])
+        my_turtle.forward(liste_reponses[4])
+        my_turtle.left(liste_reponses[1])
+        my_turtle.forward(liste_reponses[5])
+        i = i + 1
+
+my_screen = turtle.Screen()
+
+my_turtle = turtle.Turtle()
+my_turtle.speed(5)
+my_turtle.hideturtle()
+
+print("Réponses:", liste_reponses)
+draw(liste_reponses)
+
+turtle.exitonclick()
