@@ -1,0 +1,54 @@
+import turtle
+
+def poser_questions():
+    reponses = []  # Liste pour stocker les réponses
+    
+    questions = [
+        "Question 1 : ",
+        "Question 2 : ",
+        "Question 3 : ",
+        "Question 4 : ",
+        "Question 5 : ",
+        "Question 6 : "
+    ]
+    
+    for question in questions:
+        while True:
+            try:
+                #Donner les conditions
+                print("Veuillez entrer un chiffre entre 100 et 200.")
+                reponse = int(input(question + " "))
+                if 100 <= reponse <= 200:
+                    reponses.append(reponse)
+                    if reponses[0] != 0:
+                        ma_tortue.pensize(reponses[0])
+                    if reponses[1] != 0:
+                        ma_tortue.forward(reponses[1])
+                    if reponses[2] != 0:
+                        ma_tortue.left(reponses[2])
+                    if reponses[3] != 0:
+                        ma_tortue.right(reponses[3])
+                    if reponses[4] != 0:
+                        ma_tortue.forward(reponses[4])
+                    if reponses[5] != 0:
+                        ma_tortue.forward(reponses[5])
+                    
+                    fenetre = turtle.Screen()
+                    break  # Sortir de la boucle si la réponse est valide
+                else:
+                    print("La réponse doit être entre 100 et 200.")
+            except ValueError:
+                print("Veuillez entrer un chiffre valide.")
+
+    return reponses
+
+
+if __name__ == "__main__":
+    ma_tortue = turtle.Turtle()
+
+    # Appeler la fonction
+    liste_reponses = poser_questions()
+
+    # Afficher les réponses
+    print("Réponses:", liste_reponses)
+    print("Réponses:1 de jade", liste_reponses[1])
